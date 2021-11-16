@@ -116,15 +116,15 @@ class BookList {
         }
       }
 
-      const bookImage = thisBookList.booksList.querySelector(
+      const filteredBook = thisBookList.booksList.querySelector(
       // '.book__image[data-id="' + eachBookdata.id + '"'
         `.book__image[data-id="${eachBookdata.id}"]`
       );
 
-      if (shouldBeHidden) {
-        bookImage.classList.add('hidden');
+      if (!shouldBeHidden) {
+        filteredBook.classList.add('hidden');
       } else {
-        bookImage.classList.remove('hidden');
+        filteredBook.classList.remove('hidden');
       }
     }
   }
